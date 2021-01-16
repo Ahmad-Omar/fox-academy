@@ -1,0 +1,10 @@
+.recent-blog {
+    padding: 100px 30px 150px;
+    background-color: #fafafa;
+}
+@media (max-width: 768px) {
+    .recent-blog {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

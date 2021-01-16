@@ -1,0 +1,19 @@
+.connect ul {
+    display: flex;
+}
+.connect li {
+    list-style-type: none;
+    padding-right: 12px;
+}
+.connect li a {
+    background-color: #2E2E2E;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.connect li svg {
+    fill: #fff;
+}

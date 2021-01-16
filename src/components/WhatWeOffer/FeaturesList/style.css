@@ -1,0 +1,38 @@
+.features {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 42px 20px;
+}
+@media (max-width: 576px) {
+    .features {
+        grid-template-columns: 100%;
+    }
+}
+.feature-text {
+    flex-basis: 65%;
+    margin-left: 20px;
+}
+.feature-text .feature-title {
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.feature-text p {
+    color: #666;
+}
+.feature .feature-icon {
+    background-color: var(--orange-color);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+}
+.feature svg {
+    width: 35px;
+    height: auto;
+    fill: #fff;
+}

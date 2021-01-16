@@ -1,0 +1,57 @@
+/*
+font-family: 'Poppins', sans-serif;
+primary-color: #0d1128;
+orange-color: #fd5f00;
+purple-color: #5d50c6;
+*/
+:root {
+    --primary-color: #0d1128;
+    --orange-color: #fd5f00;
+    --purple-color: #5d50c6;
+    --dark-color: rgba(0, 0, 0, 0.8);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (max-width: 576px) {
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .wrapper {
+        width: 540px;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .wrapper {
+        width: 720px;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .wrapper {
+        width: 960px;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 1140px;
+    }
+}

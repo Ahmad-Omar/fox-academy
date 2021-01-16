@@ -1,0 +1,25 @@
+.subscribe {
+    margin-bottom: 40px;
+}
+.subscribe input {
+    border: none;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;    
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.subscribe input[type="email"] {
+    background-color: #393939;
+    color: #BEBEBE;
+    margin-bottom: 8px;
+}
+.subscribe input[type="submit"] {
+    background-color: var(--purple-color);
+    color: #fff;
+    
+}
+.subscribe input[type="email"]::placeholder {
+    color: #BEBEBE;
+}

@@ -1,0 +1,24 @@
+.contact-boxes {
+    padding: 120px 0;
+}
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    text-align: center;
+}
+.box {
+    background-color: #FAFAFA;
+    padding: 32px 22px 46px;
+}
+.box .box-title {
+    padding-bottom: 25px;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+.box p, .box a {
+    color: #666;
+}
+.box a {
+    color: #1a1a1a;
+}

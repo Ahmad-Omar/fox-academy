@@ -1,0 +1,18 @@
+.text-side {
+    padding-left: 60px;
+}
+@media (max-width: 992px) {
+    .text-side {
+        padding-left: 0;
+    }
+}
+.text-side .about-heading {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+.text-side .about-paragraph p {
+    line-height: 1.8;
+}
+.text-side .about-paragraph p:not(:last-child) {
+    margin-bottom: 14px;
+}

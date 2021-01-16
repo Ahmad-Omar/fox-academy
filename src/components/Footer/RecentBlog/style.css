@@ -1,0 +1,38 @@
+.footer .blogs {
+    display: flex;
+    flex-direction: column;
+}
+.footer .blog {
+    display: flex;
+    margin-bottom: 14px;
+}
+.footer .blog-image {
+    width: 125px;
+    overflow: hidden;
+    height: 100px;
+}
+.footer .blog-body .blog-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.footer .blog-image img {
+    width: 162px;
+    height: auto;
+    margin-left: -41px;
+}
+.footer .blog-body {
+    padding: 0 0 0 22px;
+}
+.footer .blog-meta div {
+    font-size: 12px;
+    color: #808080;
+    display: flex;
+    align-items: center;
+}
+.footer .blog-meta div svg {
+    width: 14px;
+    padding-right: 2px;
+}
+.footer .f-blog-author {
+    margin-right: 10px;
+}

@@ -1,0 +1,41 @@
+.hero-boxes {
+    position: absolute;
+    bottom: 50px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+.boxes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+}
+.box-item {
+    background-color: rgb(13 17 40 / 94%);
+    color: #fff;
+    flex-basis: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+}
+.box-text {
+    margin-left: 14px;
+}
+.box-text h4 {
+    font-size: 22px;
+    font-weight: 500;
+}
+.box-text a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-left: 2px;
+}
+.box-item svg {
+    width: 55px;
+}
+.box-item svg path, .box-item svg polygon, .box-item svg rect {
+    fill: var(--orange-color);
+}

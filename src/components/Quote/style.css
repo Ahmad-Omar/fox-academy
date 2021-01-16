@@ -1,0 +1,42 @@
+.quote {
+    background: url(../../assets/images/quote-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    padding: 100px 30px 125px;
+}
+@media (max-width: 768px) {
+    .quote {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.quote .overlay {
+    background: linear-gradient(45deg, #fd5f00a3, #0d1128ad);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.quote-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.right-content {
+    flex-basis: 42%;
+    padding-right: 25px;
+}
+@media (max-width: 1200px) {
+    .right-content {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 992px) {
+    .right-content {
+        flex-basis: 100%;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,20 @@
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 42%;
+    font-weight: 500;
+}
+.nav-menu li {
+    list-style-type: none;
+}
+.nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease;
+}
+.nav-menu li a:hover {
+    color: var(--orange-color);
+}
+.nav-menu li a.active {
+    color: var(--orange-color);
+}
