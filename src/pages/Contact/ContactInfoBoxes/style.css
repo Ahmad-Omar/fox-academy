@@ -7,6 +7,17 @@
     grid-column-gap: 30px;
     text-align: center;
 }
+@media (max-width: 768px) {
+    .boxes {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+    }
+}
+@media (max-width: 576px) {
+    .boxes {
+        grid-template-columns: 1fr;
+    }
+}
 .box {
     background-color: #FAFAFA;
     padding: 32px 22px 46px;
