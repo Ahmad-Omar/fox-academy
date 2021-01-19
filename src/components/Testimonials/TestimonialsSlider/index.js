@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
+import "firebase/firestore";
+import { db } from "../../../firebase";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import person1 from "../../../assets/images/teachers/teacher-1.jpg";
-import person2 from "../../../assets/images/teachers/teacher-2.jpg";
-import person3 from "../../../assets/images/teachers/teacher-3.jpg";
-import person4 from "../../../assets/images/teachers/teacher-4.jpg";
 import FormatQuoteRoundedIcon from "@material-ui/icons/FormatQuoteRounded";
 
 const settings = {
@@ -24,81 +22,45 @@ const settings = {
 };
 
 function TestimonialsSlider() {
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    db.collection("testimonials")
+      .get()
+      .then((querySnapshot) => {
+        const getData = querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setTestimonials(getData);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="testimonials-slider">
       <Slider {...settings}>
-        <div className="testimonial" style={{ width: 540 }}>
-          <div className="testi-left">
-            <div className="testimonial-image">
-              <img src={person1} alt="person-img" />
+        {testimonials.map((testimonial) => (
+          <div
+            className="testimonial"
+            key={testimonial.id}
+            style={{ width: 540 }}
+          >
+            <div className="testi-left">
+              <div className="testimonial-image">
+                <img src={testimonial.img_url} alt="person-img" />
+              </div>
+            </div>
+            <div className="testi-right">
+              <div className="quote-icon">
+                <FormatQuoteRoundedIcon />
+              </div>
+              <p className="testimonial-text">{testimonial.content}</p>
+              <h4 className="testimonial-author">{testimonial.name}</h4>
+              <p className="author-major">{testimonial.major}</p>
             </div>
           </div>
-          <div className="testi-right">
-            <div className="quote-icon">
-              <FormatQuoteRoundedIcon />
-            </div>
-            <p className="testimonial-text">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
-            <h4 className="testimonial-author">Racky Henderson</h4>
-            <p className="author-major">Electric Engineering</p>
-          </div>
-        </div>
-        <div className="testimonial" style={{ width: 540 }}>
-          <div className="testi-left">
-            <div className="testimonial-image">
-              <img src={person2} alt="person-img" />
-            </div>
-          </div>
-          <div className="testi-right">
-            <div className="quote-icon">
-              <FormatQuoteRoundedIcon />
-            </div>
-            <p className="testimonial-text">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
-            <h4 className="testimonial-author">Racky Henderson</h4>
-            <p className="author-major">Computer Engineering</p>
-          </div>
-        </div>
-        <div className="testimonial" style={{ width: 540 }}>
-          <div className="testi-left">
-            <div className="testimonial-image">
-              <img src={person3} alt="person-img" />
-            </div>
-          </div>
-          <div className="testi-right">
-            <div className="quote-icon">
-              <FormatQuoteRoundedIcon />
-            </div>
-            <p className="testimonial-text">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
-            <h4 className="testimonial-author">Racky Henderson</h4>
-            <p className="author-major">Insdustrial Engineering</p>
-          </div>
-        </div>
-        <div className="testimonial" style={{ width: 540 }}>
-          <div className="testi-left">
-            <div className="testimonial-image">
-              <img src={person4} alt="person-img" />
-            </div>
-          </div>
-          <div className="testi-right">
-            <div className="quote-icon">
-              <FormatQuoteRoundedIcon />
-            </div>
-            <p className="testimonial-text">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts.
-            </p>
-            <h4 className="testimonial-author">Racky Henderson</h4>
-            <p className="author-major">Civil Engineering</p>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );

@@ -23,26 +23,6 @@
     overflow: hidden;
     max-height: 300px;
 }
-@media (max-width: 1200px) {
-    .course-image {
-        max-height: 170px;
-    }
-}
-@media (max-width: 992px) {
-    .course-image {
-        max-height: 222px;
-    }
-}
-@media (max-width: 768px) {
-    .course-image {
-        max-height: 162px;
-    }
-}
-@media (max-width: 576px) {
-    .course-image {
-        max-height: 318px;
-    }
-}
 .course-image img {
     max-width: 100%;
     height: auto;
