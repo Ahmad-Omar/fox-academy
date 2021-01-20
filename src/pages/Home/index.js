@@ -1,7 +1,7 @@
 import React from "react";
 import AboutAcademy from "../../components/AboutAcademy";
 import Hero from "../../components/Header/Hero";
-import HeroBoxes from "../../components/Header/Hero/HeroBoxes";
+// import HeroBoxes from "../../components/Header/Hero/HeroBoxes";
 import OurCourses from "../../components/OurCourses";
 import OurTeachers from "../../components/OurTeachers";
 import Quote from "../../components/Quote";
