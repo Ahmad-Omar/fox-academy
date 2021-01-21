@@ -51,6 +51,10 @@
     margin-bottom: 20px;
     color: var(--orange-color);
 }
+.signup-form .password {
+    position: relative;
+    margin-bottom: 12px;
+}
 .have-account {
     text-align: center;
     position: relative;

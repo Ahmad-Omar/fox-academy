@@ -48,7 +48,7 @@ function MainButton(props) {
         color="primary"
         disableElevation
         style={{ width: props.width }}
-        // onClick={() => (window.location.href = props.link)}
+        onClick={props.onClick}
         className={`${classes.root} ${
           props.size === "small"
             ? classes.smallButton
