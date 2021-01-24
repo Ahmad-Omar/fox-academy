@@ -55,7 +55,8 @@
         width: 100%;
         left: 0;
         top: 65px;
-        visibility: hidden;
+        overflow: hidden;
+        transition: height 0.2s ease;
     }
     .nav-menu {
         flex-direction: column;
